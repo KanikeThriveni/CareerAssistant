@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Job Description</title>
+</head>
+<body>
+    <h2>Resume Uploaded Successfully!</h2>
+    <h3>Brief About Job Seeker:</h3>
+    <pre>{{ brief }}</pre>
+    <h3>Enter the Job Description to check suitability:</h3>
+    <form action="/check_job" method="post">
+        <textarea name="job_description" rows="8" cols="60" required></textarea><br><br>
+        <input type="hidden" name="resume_path" value="{{ resume_path }}">
+        <button type="submit">Check Suitability</button>
+    </form>
+    <hr>
+    <h4>Extracted Resume Data:</h4>
+    <pre>{{ data }}</pre>
+</body>
+</html>

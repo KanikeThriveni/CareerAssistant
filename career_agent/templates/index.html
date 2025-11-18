@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Assistant Registration</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f8; }
+        .container { max-width: 400px; margin: 60px auto; background: #fff; padding: 30px 40px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #2d3e50; }
+        label { display: block; margin-top: 18px; color: #2d3e50; }
+        input[type="text"], input[type="tel"], input[type="file"] {
+            width: 100%; padding: 10px; margin-top: 6px; border: 1px solid #ccc; border-radius: 5px;
+        }
+        button { width: 100%; padding: 12px; background: #007bff; color: #fff; border: none; border-radius: 5px; margin-top: 24px; font-size: 16px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Career Assistant Registration</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" pattern="[0-9]{10,15}" required>
+
+            <label for="resume">Upload Resume (PDF or DOCX)</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.docx" required>
+
+            <button type="submit">Register & Upload Resume</button>
+        </form>
+    </div>
+</body>
+</html>
